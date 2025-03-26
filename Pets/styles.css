@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    background-image: url(wood-2065366_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    font-family: DM+Sans;
+}
+
+.pets{
+    background-color: #012E40;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    max-width: 500px;
+}
+h1,h2,p {
+    text-align: center;
+    color: #F2E3D5;
+}
+h1,h2{
+    font-family: Fraunces;
+}
+.item p{
+    display: inline-block;
+    margin: 5px 0;
+    font-size: 18px;
+}
+.icon{
+    width: 51px;
+    height: 44px;
+}
+img {
+    display: block;
+    margin: auto;
+}
+.name {
+    text-align: left;
+    width: 20%;
+    padding: 0 15%;
+}
+.years{
+    text-align: right;
+    width: 20%;
+    padding: 0 15%;
+}
+hr{
+    background-color:#000;
+    border-color: #000;
+    height: 2px;
+}
+.description{
+    font-style: italic;
+}
+
+footer{
+    font-size: 14px;
+}
+a{
+    color: #3CA6A6;
+}
+a:visited {
+    color: #5FCDD9;
+}
+a:hover{
+    color: #3CA6A6 ;
+}

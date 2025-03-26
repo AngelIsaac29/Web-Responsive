@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header id="header-main">
+        <div class="title-container">
+            <h1>Haskell Documentation</h1>
+            <img class="logo" src="https://img.icons8.com/?size=100&id=7PfToSTpgRke&format=png&color=000000"
+                alt="Haskell logo">
+        </div>
+        <div class="position-end-container">
+            <form class="search-bar">
+                <input type="text" placeholder="Search documentation...">
+                <button class="search-btn" type="submit"><img
+                        src="https://img.icons8.com/?size=100&id=131&format=png&color=000000" alt="lupa icon"></button>
+            </form>
+            <span>Version 9.8.1</span>
+        </div>
+    </header>
+    <div class="container">
+        <nav id="navbar">
+            <header>
+                <h2>Haskell Index</h2>
+            </header>
+            <a href="#introduction" class="nav-link">Introduction</a>
+            <a href="#whats-haskell" class="nav-link">What's Haskell?</a>
+            <a href="#start-haskell" class="nav-link">What do you need to get started with Haskell?</a>
+            <a href="#first-steps" class="nav-link">First steps</a>
+            <a href="#haskell-uses" class="nav-link">Uses for Haskell</a>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="introduction">
+                <header>
+                    <h2>Introduction</h2>
+                </header>
+                <p>
+                    <span class="bold">Welcome to <i>Haskell documentation for Begginers</i></span>
+                    If you're new to Haskell, you're not alone, I'm also a beginner exploring this fascinating
+                    programming
+                    language. My background lies in object-oriented programming (OOP) languages like Java and C#, but
+                    I’ve
+                    decided to embark on a journey into the world of functional programming. This documentation is
+                    designed
+                    to guide both you and me as we take our first steps into understanding and mastering Haskell.
+                </p>
+                <p>
+                    The first question to start with haskell is… <span class="bold">What is Haskell?</span> Well,
+                    Haskell is
+                    a purely functional programming language known for its strong emphasis on immutability, concise
+                    syntax,
+                    and mathematical foundations. Unlike object-oriented programming, where the focus is on objects and
+                    their interactions, functional programming revolves around the evaluation of functions and the use
+                    of
+                    immutable data. This paradigm encourages developers to think differently about solving problems,
+                    focusing on declarative rather than imperative solutions.
+                </p>
+                <p>
+                    To begin our journey, let's start by defining functional programming and exploring its core
+                    principles.
+                    From there, we'll dive into Haskell-specific features and learn how to write our first programs in
+                    this
+                    unique and powerful language.
+                </p>
+                <p>
+                    To understand functional programming, let's first contrast it with object-oriented programming
+                    (OOP), a paradigm you might already be familiar with. In OOP, the focus is on creating
+                    objects—bundles of data and behavior—that interact with each other to solve problems. It's like
+                    building a machine where each part has a specific role, and the gears turn through method calls and
+                    state changes. While this approach works well for many scenarios, it often requires meticulous
+                    management of state and dependencies, which can become complex as your codebase grows.
+                </p>
+                <p>
+                    Functional programming, on the other hand, takes a completely different approach. Here, the emphasis
+                    is on functions as the primary building blocks of your program. Functions are treated as first-class
+                    citizens, meaning you can pass them around as arguments, return them from other functions, or even
+                    compose them to create more complex operations. The hallmark of functional programming is
+                    immutability—data doesn't change once created—and pure functions, which always produce the same
+                    output given the same input and have no side effects. Imagine programming as solving a series of
+                    mathematical equations, where every piece of your code is a predictable and reusable function.
+                </p>
+                <p>
+                    Haskell embodies this philosophy beautifully. For instance, if you wanted to double every number in
+                    a list, you wouldn't write a loop that modifies each element one by one. Instead, you'd use a
+                    function like map, which applies another function to every element of a list. Here's a sneak peek at
+                    how it looks in Haskell:
+                </p>
+                <code>
+                    <span>let numbers = [1,2,3,4]</span>
+                    <span>let doubled = map(*2) numbers</span>
+                    <span>-- Result: [2,3,6,8]</span>
+                </code>
+                <p>
+                    No loops, no mutable variables—just clear, concise, and elegant code. By focusing on what you want
+                    to achieve ratherthan how to achieve it, Haskell encourages you to think declaratively.
+                </p>
+                <p>
+                    In the upcoming sections, we'll explore how these concepts fit together, why functional programming
+                    can make your code more robust, and how Haskell's unique features—like lazy evaluation and type
+                    inference—make it a standout choice for functional programming. Whether you're here out of curiosity
+                    or planning to dive deep, this introduction will lay the groundwork for a journey into the
+                    fascinating world of Haskell.
+                </p>
+            </section>
+            <section class="main-section" id="whats-haskell">
+                <header>
+                    <h2>What's Haskell?</h2>
+                </header>
+                <p>
+                    Haskell is a purely functional programming language. In imperative languages you get things done by
+                    giving the computer a sequence of tasks and then it executes them. While executing them, it can
+                    change state. For instance, you set variable a to 5 and then do some stuff and then set it to
+                    something else. You have control flow structures for doing some action several times. In purely
+                    functional programming you don't tell the computer what to do as such but rather you tell it what
+                    stuff is. The factorial of a number is the product of all the numbers from 1 to that number, the sum
+                    of a list of numbers is the first number plus the sum of all the other numbers, and so on. You
+                    express that in the form of functions. You also can't set a variable to something and then set it to
+                    something else later. If you say that a is 5, you can't say it's something else later because you
+                    just said it was 5. What are you, some kind of liar? So in purely functional languages, a function
+                    has no side effects. The only thing a function can do is calculate something and return it as a
+                    result. At first, this seems kind of limiting but it actually has some very nice consequences: if a
+                    function is called twice with the same parameters, it's guaranteed to return the same result. That's
+                    called referential transparency and not only does it allow the compiler to reason about the
+                    program's behavior, but it also allows you to easily deduce (and even prove) that a function is
+                    correct and then build more complex functions by gluing simple functions together.
+                </p>
+                <p>
+                    Haskell is lazy. That means that unless specifically told otherwise, Haskell won't execute functions
+                    and calculate things until it's really forced to show you a result. That goes well with referential
+                    transparency and it allows you to think of programs as a series of transformations on data. It also
+                    allows cool things such as infinite data structures. Say you have an immutable list of numbers xs =
+                    [1,2,3,4,5,6,7,8] and a function doubleMe which multiplies every element by 2 and then returns a new
+                    list. If we wanted to multiply our list by 8 in an imperative language and did
+                    doubleMe(doubleMe(doubleMe(xs))), it would probably pass through the list once and make a copy and
+                    then return it. Then it would pass through the list another two times and return the result. In a
+                    lazy language, calling doubleMe on a list without forcing it to show you the result ends up in the
+                    program sort of telling you "Yeah yeah, I'll do it later!". But once you want to see the result, the
+                    first doubleMe tells the second one it wants the result, now! The second one says that to the third
+                    one and the third one reluctantly gives back a doubled 1, which is a 2. The second one receives that
+                    and gives back 4 to the first one. The first one sees that and tells you the first element is 8. So
+                    it only does one pass through the list and only when you really need it. That way when you want
+                    something from a lazy language you can just take some initial data and efficiently transform and
+                    mend it so it resembles what you want at the end.
+                </p>
+                <p>
+                    Haskell is statically typed. When you compile your program, the compiler knows which piece of code
+                    is a number, which is a string and so on. That means that a lot of possible errors are caught at
+                    compile time. If you try to add together a number and a string, the compiler will whine at you.
+                    Haskell uses a very good type system that has type inference. That means that you don't have to
+                    explicitly label every piece of code with a type because the type system can intelligently figure
+                    out a lot about it. If you say a = 5 + 4, you don't have to tell Haskell that a is a number, it can
+                    figure that out by itself. Type inference also allows your code to be more general. If a function
+                    you make takes two parameters and adds them together and you don't explicitly state their type, the
+                    function will work on any two parameters that act like numbers.
+                </p>
+            </section>
+            <section class="main-section" id="start-haskell">
+                <header>
+                    <h2>What do you need to get started with Haskell?</h2>
+                </header>
+                <p>
+                    A text editor and a Haskell compiler. You probably already have your favorite text editor installed
+                    so we won't waste time on that. For the purposes of this tutorial we'll be using GHC, the most
+                    widely used Haskell compiler. The best way to get started is to download <a
+                        href="https://www.haskell.org/ghcup/">GHCup</a>, which is the
+                    recommended Haskell installer.
+                </p>
+                <p>
+                    GHC can take a Haskell file (they usually have a .hs extension) and compile it but it also has an
+                    interactive mode which allows you to interactively interact with files. Interactively. You can call
+                    functions from files that you load and the results are displayed immediately. For learning it's a
+                    lot easier and faster than compiling every time you make a change and then running the program from
+                    the prompt. The interactive mode is invoked by typing in ghci at your prompt. If you have defined
+                    some functions in a file called, say, myfunctions.hs, you load up those functions by typing in :l
+                    myfunctions and then you can play with them, provided myfunctions.hs is in the same folder from
+                    which ghci was invoked. If you change the .hs file, just run :l myfunctions again or do :r, which is
+                    equivalent because it reloads the current file. The usual workflow for me when playing around in
+                    stuff is defining some functions in a .hs file, loading it up and messing around with them and then
+                    changing the .hs file, loading it up again and so on. This is also what we'll be doing here.
+                </p>
+            </section>
+            <section class="main-section" id="first-steps">
+                <header>
+                    <h2>First steps</h2>
+                </header>
+                <p>
+                    The first thing we're going to do is run GHC's interactive mode and call some function to get a very
+                    basic feel for Haskell. Open your terminal and type in ghci. You will be greeted with something like
+                    this.
+                </p>
+                <code>
+                    <span>GHCi, version 9.2.4: https://www.haskell.org/ghc/  :? for help</span>
+                    <span>ghci></span>
+                </code>
+                <p>Congratulations, you're in GHCI!</p>
+                <p>Here's some simple arithmetic.</p>
+                <code>
+                    <span>ghci> 2 + 15</span>
+                    <span>17</span>
+                    <span>ghci> 49 * 100</span>
+                    <span>4900</span>
+                    <span>ghci> 1892 - 1472</span>
+                    <span>420</span>
+                    <span>ghci> 5 / 2</span>
+                    <span>2.5</span>
+                    <span>ghci></span>
+                </code>
+                <p>
+                    This is pretty self-explanatory. We can also use several operators on one line and all the usual
+                    precedence rules are obeyed. We can use parentheses to make the precedence explicit or to change it.
+                </p>
+                <code>
+                    <span>ghci> (50 * 100) - 4999</span>
+                    <span>1</span>
+                    <span>ghci> 50 * 100 - 4999</span>
+                    <span>1</span>
+                    <span>ghci> 50 * (100 - 4999)</span>
+                    <span>-244950</span>
+                </code>
+                <p>
+                    Boolean algebra is also pretty straightforward. As you probably know, && means a boolean and, ||
+                    means a boolean or. not negates a True or a False.
+                </p>
+                <code>
+                    <span>ghci> True && False</span>
+                    <span>False</span>
+                    <span>ghci> True && True</span>
+                    <span>True</span>
+                </code>
+            </section>
+            <section class="main-section" id="haskell-uses">
+                <header>
+                    <h2>Uses for Haskell</h2>
+                </header>
+                <ol>
+                    <li>
+                        <h3>Compiler and Interpreter Development</h3>
+                        <p>Haskell is extensively used for creating programming languages and tools for their
+                            processing. Its declarative nature, along with features like a strong type system and
+                            support for high-level grammars, makes it an ideal choice for this domain.</p>
+                        <p>Notable Examples:</p>
+                        <ul>
+                            <li>GHC (Glasgow Haskell Compiler), the primary compiler for Haskell, is written in Haskell
+                                itself.</li>
+                            <li>Languages like Agda and tools like Pandoc (for document conversion) are also written in
+                                Haskell</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Financial Systems and Data Analysis</h3>
+                        <p>Haskell's precision and safety make it an excellent choice for financial applications, where
+                            errors can be costly. Its functional approach facilitates modeling complex calculations and
+                            managing immutable data, reducing risks in critical systems.</p>
+                        <p>Typical Uses:</p>
+                        <ul>
+                            <li>Financial modeling for complex calculations.</li>
+                            <li>Quantitative data analysis./li>
+                            <li>Quantitative data analysis.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Web Application Development</h3>
+                        <p>While not as popular as some other languages for web development, Haskell offers powerful
+                            frameworks such as Yesod and Scotty, enabling the creation of secure and scalable web
+                            applications. Lazy evaluation and pure function handling lead to more predictable and
+                            maintainable applications.</p>
+                        <p>Notable Features:</p>
+                        <ul>
+                            <li>Route safety and user data handling.</li>
+                            <li>Support for building RESTful APIs.</li>
+                            <li>Efficient deployment of web applications on modern servers</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Distributed Systems and Parallel Computing</h3>
+                        <p>Haskell excels in applications requiring parallel and distributed processing due to its lazy
+                            evaluation and declarative tools for managing concurrency.</p>
+                        <p>Common Aplications:</p>
+                        <ul>
+                            <li>Large-scale data processing in distributed systems.</li>
+                            <li>Scientific simulations and computational modeling.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Scientific Research and Applications</h3>
+                        <p>Haskell is popular in scientific research and advanced simulation development, thanks to its
+                            strong type system and ability to define complex mathematical structures.</p>
+                        <p>Examples in Science:</p>
+                        <ul>
+                            <li>Physical simulations and mathematical modeling.</li>
+                            <li>Tools for processing biological or physical data.</li>
+                            <li>Automating statistical hypothesis testing.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <address id="contact-information">
+            <h4>Contact information</h4>
+            <p>Created by: Angel Isaac Garcia Ruiz</p>
+            <p>Email: <a href="mailto:judas@gmail.com">judas@gmail.com</a></p>
+            <p>Phone: +52 554 098 7654</p>
+            <p>Address: Unknowed</p>
+            <p>Follow me:</p>
+            <a href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank"
+                title="Follow me on Facebook"><img
+                    src="https://img.icons8.com/?size=100&id=118467&format=png&color=000000" alt="facebook icon"></a>
+            <a href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank"
+                title="Follow me on Instagram"><img
+                    src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000" alt="instagram icon"></a>
+        </address>
+    </footer>
+</body>
+
+</html>

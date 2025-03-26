@@ -1,0 +1,44 @@
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    position: relative; /* Necesario para que los submenús se posicionen correctamente */
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    background-color: #00D40B;
+    color: white;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #008A0E;
+    min-width: 150px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+nav li:hover .submenu,
+nav li:focus-within .submenu { /* Para accesibilidad en teclado */
+    display: block;
+}
